@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Recipe Cards</title>
+    <style>
+        /* ===== Reset & Base Styles ===== */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f8f8;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        h1 {
+            text-align: center;
+            margin: 20px 0;
+            color: #ff6f61;
+        }
+
+        /* ===== Container ===== */
+        .recipe-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            padding: 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+
+        /* ===== Recipe Card ===== */
+        .recipe-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .recipe-card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .recipe-card-content {
+            padding: 15px;
+            flex: 1;
+        }
+
+        .recipe-card h2 {
+            color: #ff6f61;
+            margin-bottom: 10px;
+        }
+
+        .description {
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        h3 {
+            margin-top: 15px;
+            margin-bottom: 5px;
+            font-size: 1rem;
+            color: #444;
+        }
+
+        ul {
+            margin-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        /* ===== Hover Effects ===== */
+        .recipe-card:hover {
+            transform: scale(1.03);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+        }
+
+        /* ===== Responsive ===== */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 1.5rem;
+            }
+            .recipe-card img {
+                height: 180px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🍽 Delicious Recipes</h1>
+
+    <div class="recipe-container">
+        <!-- Recipe 1 -->
+        <div class="recipe-card">
+            <img src="https://source.unsplash.com/400x300/?pasta" alt="Pasta">
+            <div class="recipe-card-content">
+                <h2>Italian Pasta</h2>
+                <p class="description">A classic Italian pasta dish with rich tomato sauce and fresh herbs.</p>
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>200g pasta</li>
+                    <li>2 cups tomato sauce</li>
+                    <li>Fresh basil leaves</li>
+                </ul>
+                <h3>Preparation</h3>
+                <p>Boil pasta until al dente, mix with sauce, and garnish with basil.</p>
+            </div>
+        </div>
+
+        <!-- Recipe 2 -->
+        <div class="recipe-card">
+            <img src="Simple-Italian-Salad_EXPS_FT20_25957_F_0624_1-1.jpg" alt="Salad">
+            <div class="recipe-card-content">
+                <h2>Fresh Garden Salad</h2>
+                <p class="description">A refreshing mix of lettuce, tomatoes, cucumbers, and dressing.</p>
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Lettuce leaves</li>
+                    <li>Cherry tomatoes</li>
+                    <li>Cucumber slices</li>
+                </ul>
+                <h3>Preparation</h3>
+                <p>Mix all veggies in a bowl, drizzle with olive oil, and season to taste.</p>
+            </div>
+        </div>
+
+        <!-- Recipe 3 -->
+        <div class="recipe-card">
+            <img src="images.search.yahoo.com.jpeg"" alt="Pizza">
+            <div class="recipe-card-content">
+                <h2>Cheese Pizza</h2>
+                <p class="description">Crispy crust topped with tomato sauce, cheese, and herbs.</p>
+                <h3>Ingredients</h3>
+                <ul>
+                    <li>Pizza dough</li>
+                    <li>Mozzarella cheese</li>
+                    <li>Tomato sauce</li>
+                </ul>
+                <h3>Preparation</h3>
+                <p>Spread sauce on dough, add cheese, and bake until golden brown.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
